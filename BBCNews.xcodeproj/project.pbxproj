@@ -14,6 +14,9 @@
 		2683CAF52A558DBE00AD2837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2683CAF42A558DBE00AD2837 /* Assets.xcassets */; };
 		2683CAF82A558DBE00AD2837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2683CAF62A558DBE00AD2837 /* LaunchScreen.storyboard */; };
 		2683CB002A558E6000AD2837 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2683CAFF2A558E6000AD2837 /* .gitignore */; };
+		268B83C52A55B9AE0028CBC4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B83C42A55B9AE0028CBC4 /* Article.swift */; };
+		268B83C82A565BD30028CBC4 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B83C62A565BD30028CBC4 /* ArticleCell.swift */; };
+		268B83C92A565BD30028CBC4 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268B83C72A565BD30028CBC4 /* ArticleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		2683CAF72A558DBE00AD2837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2683CAF92A558DBE00AD2837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2683CAFF2A558E6000AD2837 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		268B83C42A55B9AE0028CBC4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		268B83C62A565BD30028CBC4 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		268B83C72A565BD30028CBC4 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		2683CAEA2A558DBE00AD2837 /* BBCNews */ = {
 			isa = PBXGroup;
 			children = (
+				268B83C32A55B9A10028CBC4 /* Model */,
 				268B83C22A5591100028CBC4 /* Controller */,
 				268B83C12A5591060028CBC4 /* View */,
 				2683CAEB2A558DBE00AD2837 /* AppDelegate.swift */,
@@ -74,6 +81,8 @@
 			children = (
 				2683CAF62A558DBE00AD2837 /* LaunchScreen.storyboard */,
 				2683CAF12A558DBE00AD2837 /* Main.storyboard */,
+				268B83C62A565BD30028CBC4 /* ArticleCell.swift */,
+				268B83C72A565BD30028CBC4 /* ArticleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -84,6 +93,14 @@
 				2683CAEF2A558DBE00AD2837 /* ArticleViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		268B83C32A55B9A10028CBC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				268B83C42A55B9AE0028CBC4 /* Article.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +164,7 @@
 				2683CB002A558E6000AD2837 /* .gitignore in Resources */,
 				2683CAF82A558DBE00AD2837 /* LaunchScreen.storyboard in Resources */,
 				2683CAF52A558DBE00AD2837 /* Assets.xcassets in Resources */,
+				268B83C92A565BD30028CBC4 /* ArticleCell.xib in Resources */,
 				2683CAF32A558DBE00AD2837 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268B83C52A55B9AE0028CBC4 /* Article.swift in Sources */,
 				2683CAF02A558DBE00AD2837 /* ArticleViewController.swift in Sources */,
 				2683CAEC2A558DBE00AD2837 /* AppDelegate.swift in Sources */,
+				268B83C82A565BD30028CBC4 /* ArticleCell.swift in Sources */,
 				2683CAEE2A558DBE00AD2837 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
