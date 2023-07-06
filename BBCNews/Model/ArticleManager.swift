@@ -15,7 +15,7 @@ protocol ArticleManagerDelegate {
 
 
 struct ArticleManager {
-    let articleURL = "https://newsapi.org/v2/top-headlines?apiKey=d32c743fa73647b39cd21043a26cf83a&sources=bbc-news"
+    let articleURL = "https://newsapi.org/v2/top-headlines?apiKey=d32c743fa73647b39cd21043a26cf83a&sources=abc-news"
     
     var delegate: ArticleManagerDelegate?
     

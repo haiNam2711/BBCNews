@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ArticleViewController: UIViewController {
     
@@ -56,7 +57,12 @@ extension ArticleViewController: UITableViewDataSource {
 // MARK: - TableView Delegate
 extension ArticleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let urlString = articlesList[indexPath.row].url
+        if let url = URL(string: urlString) {
+            let safariViewController = SFSafariViewController(url: url)
+            safariViewController.delegate = self
+            self.present(safariViewController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -72,5 +78,12 @@ extension ArticleViewController: ArticleManagerDelegate {
     
     func didFailWithError(error: Error) {
         print(error)
+    }
+}
+
+//MARK: - SafariDelegate
+extension ArticleViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
