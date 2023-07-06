@@ -10,7 +10,9 @@ import UIKit
 class ArticleViewController: UIViewController {
     
     @IBOutlet weak var articleTableView: UITableView!
-    let articles : [Article] = [Article(image: "https://ichef.bbci.co.uk/news/1024/branded_news/3046/production/_130285321_microsoftteams-image-76.png", title: "Celebrating Pride in the midst of a culture war", subtitle: "The final day of Pride Month in Philadelphia, Pennsylvania, was filled with heart-shaped sunglasses, rainbow-coloured hair, glitter and rage. Hundreds had gathered outside a hotel in the city centre…")]
+    
+    var articleManager = ArticleManager()
+    var articlesList = [Article]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,24 +28,26 @@ class ArticleViewController: UIViewController {
         
         articleTableView.delegate = self
         articleTableView.dataSource = self
+        articleManager.delegate = self
         articleTableView.rowHeight = 440
         articleTableView.register(UINib(nibName: "ArticleCell", bundle: nil), forCellReuseIdentifier: "ArticleCell")
+        articleManager.performRequest()
     }
     
 }
 // MARK: - TableView DataSource
 extension ArticleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count
+        return articlesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticleCell
         
-        let article = articles[indexPath.row]
+        let article = articlesList[indexPath.row]
         cell.titleLabel.text = article.title
-        cell.subtitleLabel.text = article.subtitle
-        cell.articleImage.image = UIImage(named: "ExampleImage")
+        cell.subtitleLabel.text = article.content
+        cell.articleImage.downloaded(from: article.urlToImage)
         
         return cell
     }
@@ -53,5 +57,20 @@ extension ArticleViewController: UITableViewDataSource {
 extension ArticleViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+//MARK: - WeatherManagerDelegate
+extension ArticleViewController: ArticleManagerDelegate {
+    
+    func didUpdateArticle(_ articleManager: ArticleManager, articleList: [Article]) {
+        DispatchQueue.main.async {
+            self.articlesList = articleList
+            self.articleTableView.reloadData()
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }

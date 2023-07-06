@@ -17,6 +17,8 @@
 		268B83C52A55B9AE0028CBC4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B83C42A55B9AE0028CBC4 /* Article.swift */; };
 		268B83C82A565BD30028CBC4 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B83C62A565BD30028CBC4 /* ArticleCell.swift */; };
 		268B83C92A565BD30028CBC4 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268B83C72A565BD30028CBC4 /* ArticleCell.xib */; };
+		26AF83522A56D02F00AC6E9E /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF83512A56D02F00AC6E9E /* ArticleManager.swift */; };
+		26AF83542A56D14700AC6E9E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF83532A56D14700AC6E9E /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		268B83C42A55B9AE0028CBC4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		268B83C62A565BD30028CBC4 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		268B83C72A565BD30028CBC4 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
+		26AF83512A56D02F00AC6E9E /* ArticleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
+		26AF83532A56D14700AC6E9E /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		268B83C22A5591100028CBC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				26AF83532A56D14700AC6E9E /* UIImageViewExtension.swift */,
 				2683CAEF2A558DBE00AD2837 /* ArticleViewController.swift */,
 			);
 			path = Controller;
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				268B83C42A55B9AE0028CBC4 /* Article.swift */,
+				26AF83512A56D02F00AC6E9E /* ArticleManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +186,8 @@
 				2683CAF02A558DBE00AD2837 /* ArticleViewController.swift in Sources */,
 				2683CAEC2A558DBE00AD2837 /* AppDelegate.swift in Sources */,
 				268B83C82A565BD30028CBC4 /* ArticleCell.swift in Sources */,
+				26AF83522A56D02F00AC6E9E /* ArticleManager.swift in Sources */,
+				26AF83542A56D14700AC6E9E /* UIImageViewExtension.swift in Sources */,
 				2683CAEE2A558DBE00AD2837 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

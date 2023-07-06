@@ -6,15 +6,13 @@
 //
 
 import Foundation
-class Article {
-    let image: String
-        let title: String
-        let subtitle: String
-        
-        init(image: String, title: String, subtitle: String) {
-            self.image = image
-            self.title = title
-            self.subtitle = subtitle
-        }
+class ArticleList: Decodable{
+    let articles: [Article]
+}
 
+class Article: Decodable{
+    let title: String
+    let url: String
+    let urlToImage: String
+    let content: String
 }
