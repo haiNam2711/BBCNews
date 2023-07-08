@@ -43,7 +43,7 @@ struct ArticleManager {
             let decodedData = try decoder.decode(ArticleList.self, from: articleData)
             return decodedData.articles
         } catch {
-//            delegate?.didFailWithError(error: error)
+            delegate?.didFailWithError(error: error)
             return nil
         }
     }

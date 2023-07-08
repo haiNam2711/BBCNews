@@ -99,17 +99,74 @@
             </objects>
             <point key="canvasLocation" x="22" y="-658"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="3Eo-LP-52t">
             <objects>
-                <viewController id="bpN-3o-Phc" sceneMemberID="viewController">
+                <viewController id="bpN-3o-Phc" customClass="MenuViewController" customModule="BBCNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bkM-Z6-hfi">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c70-qA-Kph">
                                 <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-Pa-P2C">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="670"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kV-LA-rP6">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="167.66666666666666"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pSq-D0-0qd">
+                                                        <rect key="frame" x="17" y="15" width="272" height="91.666666666666671"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2E-D5-1c1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="272" height="37"/>
+                                                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="31"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for using BBC service." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-zf-kwn">
+                                                                <rect key="frame" x="0.0" y="67" width="272" height="24.666666666666671"/>
+                                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="pSq-D0-0qd" firstAttribute="leading" secondItem="4kV-LA-rP6" secondAttribute="leading" constant="17" id="R0i-U3-MPr"/>
+                                                    <constraint firstItem="pSq-D0-0qd" firstAttribute="top" secondItem="4kV-LA-rP6" secondAttribute="top" constant="15" id="fhF-qw-bL5"/>
+                                                </constraints>
+                                            </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mnb-dT-7ON">
+                                                <rect key="frame" x="0.0" y="167.66666666666671" width="390" height="502.33333333333326"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" id="Lp6-Yy-uUS">
+                                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lp6-Yy-uUS" id="oo8-De-dzP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="43.666667938232422"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4kV-LA-rP6" firstAttribute="height" secondItem="7u7-Pa-P2C" secondAttribute="height" multiplier="0.25" id="QAd-QG-ona"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="7u7-Pa-P2C" firstAttribute="top" secondItem="c70-qA-Kph" secondAttribute="top" id="B3j-gT-n25"/>
+                                    <constraint firstAttribute="trailing" secondItem="7u7-Pa-P2C" secondAttribute="trailing" id="QD0-3L-c23"/>
+                                    <constraint firstAttribute="bottom" secondItem="7u7-Pa-P2C" secondAttribute="bottom" id="S7l-uD-jC9"/>
+                                    <constraint firstItem="7u7-Pa-P2C" firstAttribute="leading" secondItem="c70-qA-Kph" secondAttribute="leading" id="pPg-Jc-59l"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPi-xi-gb7"/>
@@ -122,15 +179,64 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KBu-ju-Lqr"/>
+                    <connections>
+                        <outlet property="menuTableView" destination="mnb-dT-7ON" id="Ell-6j-jV4"/>
+                        <segue destination="smu-Sf-es6" kind="show" identifier="segueToSavedArticle" id="Kwq-w4-Kyf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6Z-bo-b7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-658"/>
+            <point key="canvasLocation" x="1844.6153846153845" y="-658.29383886255926"/>
+        </scene>
+        <!--Saved Article View Controller-->
+        <scene sceneID="tux-dK-fnk">
+            <objects>
+                <viewController id="smu-Sf-es6" customClass="SavedArticleViewController" customModule="BBCNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Zh-N0-pSY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Olk-4q-ce5">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedDataCell" id="aeh-U5-zt2">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aeh-U5-zt2" id="8gK-z1-pac">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="59Y-3N-Gtm"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="59Y-3N-Gtm" firstAttribute="trailing" secondItem="Olk-4q-ce5" secondAttribute="trailing" id="9tA-uB-WOU"/>
+                            <constraint firstItem="Olk-4q-ce5" firstAttribute="top" secondItem="59Y-3N-Gtm" secondAttribute="top" id="B2g-0s-gIx"/>
+                            <constraint firstItem="59Y-3N-Gtm" firstAttribute="bottom" secondItem="Olk-4q-ce5" secondAttribute="bottom" id="Q19-wH-Ox0"/>
+                            <constraint firstItem="Olk-4q-ce5" firstAttribute="leading" secondItem="59Y-3N-Gtm" secondAttribute="leading" id="hnu-rj-dd8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PGl-hG-y2h"/>
+                    <connections>
+                        <outlet property="saveArticleTableView" destination="Olk-4q-ce5" id="ouI-bm-IfT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ufp-o0-ncF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3860" y="-658.29383886255926"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <image name="folder" catalog="system" width="128" height="96"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

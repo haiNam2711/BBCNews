@@ -7,6 +7,7 @@
 
 import UIKit
 import SafariServices
+import RealmSwift
 
 class ArticleViewController: UIViewController {
     
@@ -14,18 +15,11 @@ class ArticleViewController: UIViewController {
     
     var articleManager = ArticleManager()
     var articlesList = [Article]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let titleLabel = UILabel()
-        titleLabel.font = UIFont(name: "GillSans-Bold", size: 22)
-        titleLabel.text = "BBC News"
-        
-        let hStack = UIStackView(arrangedSubviews: [titleLabel])
-        hStack.spacing = 5
-        hStack.alignment = .center
-        
-        navigationItem.titleView = hStack
+        navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "GillSans-Bold", size: 22)!]
+        navigationItem.title = "BBC News"
         
         articleTableView.delegate = self
         articleTableView.dataSource = self
@@ -49,6 +43,7 @@ extension ArticleViewController: UITableViewDataSource {
         cell.titleLabel.text = article.title
         cell.subtitleLabel.text = article.content
         cell.articleImage.downloaded(from: article.urlToImage)
+        cell.url = article.url
         
         return cell
     }

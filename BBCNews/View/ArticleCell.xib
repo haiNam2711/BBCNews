@@ -64,12 +64,15 @@
                                 <rect key="frame" x="0.0" y="598" width="490" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJm-8z-2UL">
-                                        <rect key="frame" x="443" y="3" width="47" height="34.333333333333336"/>
+                                        <rect key="frame" x="448.66666666666669" y="3" width="41.333333333333314" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="square.and.arrow.down.on.square" catalog="system" symbolScale="medium"/>
+                                            <imageReference key="image" image="bookmark" catalog="system" symbolScale="medium"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="saveButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0Zj-2h-Tfn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,7 +106,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="square.and.arrow.down.on.square" catalog="system" width="122" height="128"/>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
