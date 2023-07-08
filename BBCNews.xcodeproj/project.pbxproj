@@ -10,6 +10,10 @@
 		26656CDC2A596B8500817290 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 26656CDB2A596B8500817290 /* Realm */; };
 		26656CDE2A596B8500817290 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26656CDD2A596B8500817290 /* RealmSwift */; };
 		26656CE02A59893A00817290 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26656CDF2A59893A00817290 /* RealmData.swift */; };
+		26656CE62A59A77B00817290 /* demo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26656CE22A59A77B00817290 /* demo1.png */; };
+		26656CE72A59A77B00817290 /* demo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 26656CE32A59A77B00817290 /* demo3.png */; };
+		26656CE82A59A77B00817290 /* demo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26656CE42A59A77B00817290 /* demo2.png */; };
+		26656CE92A59A77B00817290 /* demo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 26656CE52A59A77B00817290 /* demo4.png */; };
 		2683CAEC2A558DBE00AD2837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683CAEB2A558DBE00AD2837 /* AppDelegate.swift */; };
 		2683CAEE2A558DBE00AD2837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683CAED2A558DBE00AD2837 /* SceneDelegate.swift */; };
 		2683CAF02A558DBE00AD2837 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2683CAEF2A558DBE00AD2837 /* ArticleViewController.swift */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		26656CDF2A59893A00817290 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
+		26656CE22A59A77B00817290 /* demo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo1.png; sourceTree = "<group>"; };
+		26656CE32A59A77B00817290 /* demo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo3.png; sourceTree = "<group>"; };
+		26656CE42A59A77B00817290 /* demo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo2.png; sourceTree = "<group>"; };
+		26656CE52A59A77B00817290 /* demo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo4.png; sourceTree = "<group>"; };
 		2683CAE82A558DBE00AD2837 /* BBCNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBCNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2683CAEB2A558DBE00AD2837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2683CAED2A558DBE00AD2837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26656CE12A59A61B00817290 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				26656CE22A59A77B00817290 /* demo1.png */,
+				26656CE42A59A77B00817290 /* demo2.png */,
+				26656CE32A59A77B00817290 /* demo3.png */,
+				26656CE52A59A77B00817290 /* demo4.png */,
+				2683CAF42A558DBE00AD2837 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		2683CADF2A558DBE00AD2837 = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +99,12 @@
 		2683CAEA2A558DBE00AD2837 /* BBCNews */ = {
 			isa = PBXGroup;
 			children = (
+				2683CAED2A558DBE00AD2837 /* SceneDelegate.swift */,
+				2683CAEB2A558DBE00AD2837 /* AppDelegate.swift */,
 				268B83C32A55B9A10028CBC4 /* Model */,
 				268B83C22A5591100028CBC4 /* Controller */,
 				268B83C12A5591060028CBC4 /* View */,
-				2683CAEB2A558DBE00AD2837 /* AppDelegate.swift */,
-				2683CAED2A558DBE00AD2837 /* SceneDelegate.swift */,
-				2683CAF42A558DBE00AD2837 /* Assets.xcassets */,
+				26656CE12A59A61B00817290 /* Supporting files */,
 				2683CAF92A558DBE00AD2837 /* Info.plist */,
 			);
 			path = BBCNews;
@@ -190,7 +210,11 @@
 				2683CB002A558E6000AD2837 /* .gitignore in Resources */,
 				2683CAF82A558DBE00AD2837 /* LaunchScreen.storyboard in Resources */,
 				2683CAF52A558DBE00AD2837 /* Assets.xcassets in Resources */,
+				26656CE82A59A77B00817290 /* demo2.png in Resources */,
 				268B83C92A565BD30028CBC4 /* ArticleCell.xib in Resources */,
+				26656CE72A59A77B00817290 /* demo3.png in Resources */,
+				26656CE62A59A77B00817290 /* demo1.png in Resources */,
+				26656CE92A59A77B00817290 /* demo4.png in Resources */,
 				2683CAF32A558DBE00AD2837 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
