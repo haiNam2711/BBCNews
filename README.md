@@ -5,6 +5,6 @@ App đọc báo sử dụng ngôn ngữ Swift trên hệ điều hành iOS, tron
 
 ## Demo:
 <img src="BBCNews/Supporting files/demo1.png" width="350" height="740"/>
-<img src="BBCNews/Supporting files/demo1.png" width="350" height="740"/>
-<img src="BBCNews/Supporting files/demo1.png" width="350" height="740"/>
-<img src="BBCNews/Supporting files/demo1.png" width="350" height="740"/>
+<img src="BBCNews/Supporting files/demo2.png" width="350" height="740"/>
+<img src="BBCNews/Supporting files/demo3.png" width="350" height="740"/>
+<img src="BBCNews/Supporting files/demo4.png" width="350" height="740"/>
