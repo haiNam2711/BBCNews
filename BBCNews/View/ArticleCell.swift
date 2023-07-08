@@ -40,7 +40,6 @@ class ArticleCell: UITableViewCell {
         do {
             try realm.write{
                 realm.add(data)
-                print("0000")
             }
         } catch {
             print(error)

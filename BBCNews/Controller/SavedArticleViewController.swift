@@ -21,7 +21,30 @@ class SavedArticleViewController: UIViewController {
         saveArticleTableView.dataSource = self
         saveArticleTableView.rowHeight = 75
         loadData()
+        
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        saveArticleTableView.addGestureRecognizer(longPressGesture)
     }
+    
+    //MARK: - Long Press To Delete Article
+    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+            if gestureRecognizer.state == .began {
+                let touchPoint = gestureRecognizer.location(in: saveArticleTableView)
+                if let indexPath = saveArticleTableView.indexPathForRow(at: touchPoint) {
+                    if let article = savedData?[indexPath.row] {
+                        do {
+                            try realm.write{
+                                realm.delete(article)
+                                self.saveArticleTableView.reloadData()
+                            }
+                        } catch {
+                            print(error)
+                        }
+                    }
+                }
+            }
+        }
 }
 // MARK: - Table view data source
 extension SavedArticleViewController: UITableViewDataSource {
@@ -56,10 +79,10 @@ extension SavedArticleViewController: UITableViewDelegate {
             let safariViewController = SFSafariViewController(url: url)
             safariViewController.delegate = self
             self.present(safariViewController, animated: true, completion: nil)
+            saveArticleTableView.deselectRow(at: indexPath, animated: false)
         }
     }
     
-    tableview
 }
 
 //MARK: - SafariDelegate
