@@ -272,6 +272,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign In" cornerStyle="fixed">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signInButtonClicked:" destination="5a8-cT-Qcr" eventType="touchUpInside" id="c9q-8b-VTW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -299,6 +302,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="87e-9k-z95"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="f7G-Bg-FOt" id="wxg-cE-QKW"/>
+                        <outlet property="passWordTextField" destination="f7G-Bg-FOt" id="iTa-4s-evo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEi-CP-AjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -350,6 +357,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign up" cornerStyle="fixed">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signUpClicked:" destination="FfK-1X-sp4" eventType="touchUpInside" id="Kqu-Uf-RmU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -378,6 +388,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ia8-jb-Mqi"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="z83-XW-61k" id="miW-QW-7cs"/>
+                        <outlet property="passwordTextField" destination="OEl-wB-i8l" id="3fC-AS-Xvq"/>
+                        <outlet property="rePassWordTextField" destination="2fJ-g4-2SO" id="Nxf-Th-wqi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3M-bH-fAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
