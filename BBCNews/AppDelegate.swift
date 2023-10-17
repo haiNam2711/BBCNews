@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(error.localizedDescription)
         }
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: "GillSans-Bold", size: 15)!], for: UIControl.State.normal)
-        
+        FirebaseApp.configure()
         return true
     }
     
