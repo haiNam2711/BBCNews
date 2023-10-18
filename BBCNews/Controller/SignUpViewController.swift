@@ -19,7 +19,16 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func signUpClicked(_ sender: Any) {
-        if let email = emailTextField.text, let password = passwordTextField.text {
+        if let email = emailTextField.text, let password = passwordTextField.text, let rePassword = rePassWordTextField.text {
+            if (password != rePassword) {
+                let alert = UIAlertController(title: "Sign Up Failed", message: "Password is not equal.", preferredStyle: .alert)
+
+                let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                }
+
+                alert.addAction(okAction)
+                self.present(alert, animated: true)
+            }
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
             
                 if let error = error {
