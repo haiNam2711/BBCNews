@@ -303,7 +303,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="87e-9k-z95"/>
                     <connections>
-                        <outlet property="emailTextField" destination="f7G-Bg-FOt" id="wxg-cE-QKW"/>
+                        <outlet property="emailTextField" destination="dBS-7u-1LG" id="SRy-lL-3bs"/>
                         <outlet property="passWordTextField" destination="f7G-Bg-FOt" id="iTa-4s-evo"/>
                     </connections>
                 </viewController>
